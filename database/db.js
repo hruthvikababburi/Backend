@@ -9,12 +9,12 @@ const db = new sqlite.Database('../models/todos.db',(err)=>{
     }
     const usersCreateTable = `CREATE TABLE IF NOT EXISTS users
                                 (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                                username TEXT UNIQUE,
-                                password TEXT)`
+                                username TEXT UNIQUE NOT NULL,
+                                password TEXT NOT NULL)`
     const todosCreateTable = `CREATE TABLE IF NOT EXISTS todos 
                                 (id INTEGER PRIMARY KEY AUTOINCREMENT,
                                 user_id INTEGER,
-                                description TEXT,
+                                description TEXT NOT NULL,
                                 status TEXT,
                                 FOREIGN KEY(user_id) REFERENCES users(id))`
 
