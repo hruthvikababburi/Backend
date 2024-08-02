@@ -30,3 +30,4 @@ const db = new sqlite.Database('../models/todos.db',(err)=>{
     })                            
 })
 
+module.exports = db
