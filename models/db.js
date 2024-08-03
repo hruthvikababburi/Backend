@@ -1,5 +1,5 @@
 const sqlite = require('sqlite3').verbose()
-const db = new sqlite.Database('../models/todos.db',(err)=>{
+const db = new sqlite.Database('./database/todos.db',(err)=>{
     if(err){
         console.log(`Error while opening database ${err.message}`)
         return;

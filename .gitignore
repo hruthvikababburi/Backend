@@ -4,5 +4,7 @@ node_modules
 #environmental variables
 .env
 
-#sqlite3 database
-models
+
+
+# SQLite database
+database/todos.db
